@@ -115,21 +115,35 @@ This and all other lab assignments will simulate the engineering practices in a 
 
 You work **independently** on the tasks below in your forked repo.
 
-When you're done with a task, you ask your collaborator to review your PR created for that task.
+Here's the process for a task:
 
-The exact flow for each task is `Issue -> PR -> Review`:
+1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using the "Lab Task" option and fill in the details.
+2. Create a new branch for the issue via [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch name>`.
+3. Make [commits](https://smartprogramming.in/tutorials/git-and-github/git-commit) to that branch to complete the task.
+     - Commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format.
+     - Commit to the branch using one of these approaches:
+       1. Using VS Code (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): "Activity Bar" -> "Source Control" -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click "Stage Selected Ranges" -> Write a commit message -> Click "Commit".
+       2. Using a terminal (adds all changes in these files to the staging area):
 
-- [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using one of the suggested issue types.
-- Create a new branch for the issue using [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b branch-name`.
-- Make commits to that branch to complete the task.
-- Write a commit message following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for each commit.
-- [Create](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) a PR to the `main` branch.
-- [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
-- Request a review of the PR from the collaborator.
-- Address the comments, e.g., make fixes or ask to clarify the comment.
-- Get the collaborator to approve the PR.
-- Merge the PR to the `main` branch.
-- Close the issue.
+          ```console
+          git add <file 1> <file 2> ... <file n>
+          git commit -m "<message>"
+          ```
+
+4. Push the branch to your forked repo via [GitLens](https://www.gitkraken.com/blog/vs-code-pull-request) or via the terminal:
+
+    ```console
+    git push -u origin <branch name>
+    ```
+
+5. Create a PR to the `main` branch via [GitLens](https://www.gitkraken.com/blog/vs-code-pull-request) or via [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+6. Write an appropriate PR description following the PR template.
+7. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
+8. Request a review of the PR from the collaborator.
+9. Address the comments, e.g., make fixes or ask to clarify the comment.
+10. Get the collaborator to approve the PR.
+11. Merge the PR to the `main` branch.
+12. Close the issue.
 
 Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 
